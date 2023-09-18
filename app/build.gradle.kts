@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.mysoothe"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.mysoothe"
-        minSdk = 30
-        targetSdk = 33
+        minSdk = 29
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

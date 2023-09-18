@@ -36,6 +36,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mysoothe.ui.theme.MySootheTheme
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
+
+
 
 
 class MainActivity : ComponentActivity() {
@@ -128,6 +133,29 @@ fun FavoriteCollectionCard(
     }
 }
 
+val alignYourBodyData = listOf(
+    AlignYourBodyElementData(
+        drawable = R.drawable.hiit_yoga,
+        text = R.string.hiit_yoga
+    ),
+    AlignYourBodyElementData(
+        drawable = R.drawable.stretching,
+        text = R.string.Stretching
+    ),
+    AlignYourBodyElementData(
+        drawable = R.drawable.quick_yoga,
+        text = R.string.quick_yoga
+    ),
+    AlignYourBodyElementData(
+        drawable = R.drawable.tabata,
+        text = R.string.tabata_yoga
+    ),
+    AlignYourBodyElementData(
+        drawable = R.drawable.prenatal_yoga,
+        text = R.string.prenatal_yoga
+    ),
+
+)
 @Composable
 fun AlignYourBodyRow(
     modifier: Modifier = Modifier
@@ -138,7 +166,7 @@ fun AlignYourBodyRow(
         modifier = modifier
     ){
         items(alignYourBodyData){item ->
-            AlignYourBodyElement(item.drawbale,item.text)
+            AlignYourBodyElement(item.drawable, item.text)
         }
     }
 }
@@ -174,3 +202,18 @@ fun FavoriteCollectionCardPreview() {
         )
     }
 }
+
+@Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
+@Composable
+fun AlignYourBodyRowPreview() {
+    MySootheTheme {
+        AlignYourBodyRow(
+
+        )
+    }
+}
+
+data class AlignYourBodyElementData(
+    @DrawableRes val drawable: Int,
+    @StringRes val text: Int
+)
