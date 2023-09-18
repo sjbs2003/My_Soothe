@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MySoothe</string>
+    <string name="placeholder_search">placeholder</string>
+    <string name="pexels_photo">Inversions</string>
+    <string name="Stretching">Stretching</string>
+    <string name="hiit_yoga">HIIT</string>
+    <string name="quick_yoga">Quick Yoga</string>
+    <string name="tabata_yoga">Tabata Yoga</string>
+    <string name="prenatal_yoga">Prenatal Yoga</string>
+    <string name="nature_meditations">Nature Meditations</string>
+</resources>
